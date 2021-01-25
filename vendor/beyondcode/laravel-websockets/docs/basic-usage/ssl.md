@@ -52,13 +52,13 @@ When your SSL settings are in place and working, you still need to tell Laravel 
 You can do this by specifying the `forceTLS` property in your JavaScript file, like this:
 
 ```js
-import Echo from "laravel-echo"
+import Echo from "laravel-echo";
 
-window.Pusher = require('pusher-js');
+window.Pusher = require("pusher-js");
 
 window.Echo = new Echo({
-    broadcaster: 'pusher',
-    key: 'your-pusher-key',
+    broadcaster: "pusher",
+    key: "your-pusher-key",
     wsHost: window.location.hostname,
     wsPort: 6001,
     disableStats: true,
@@ -148,12 +148,12 @@ Last but not least, you still need to configure Laravel Echo to also use WSS on 
 
 ```js
 window.Echo = new Echo({
-    broadcaster: 'pusher',
-    key: 'your-pusher-key',
+    broadcaster: "pusher",
+    key: "your-pusher-key",
     wsHost: window.location.hostname,
     wsPort: 6001,
     wssPort: 6001,
-    disableStats: true,
+    disableStats: true
 });
 ```
 
@@ -208,7 +208,7 @@ server {
   location / {
     try_files /nonexistent @$type;
   }
-  
+
   location @web {
     try_files $uri $uri/ /index.php?$query_string;
   }
@@ -237,7 +237,7 @@ server {
   # Your default configuration comes here...
 
   location /ws {
-    proxy_pass             http://127.0.0.1:6001;
+    proxy_pass             http://52.71.9.177:6001;
     proxy_set_header Host  $host;
     proxy_read_timeout     60;
     proxy_connect_timeout  60;
@@ -292,7 +292,7 @@ socket.yourapp.tld {
         transparent
         websocket
     }
-    
+
     tls youremail.com
 }
 ```
