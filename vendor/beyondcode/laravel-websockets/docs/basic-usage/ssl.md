@@ -237,7 +237,7 @@ server {
   # Your default configuration comes here...
 
   location /ws {
-    proxy_pass             http://52.71.9.177:6001;
+    proxy_pass             http://musicchatbackend-env.eba-amie833e.us-east-1.elasticbeanstalk.com:6001;
     proxy_set_header Host  $host;
     proxy_read_timeout     60;
     proxy_connect_timeout  60;
